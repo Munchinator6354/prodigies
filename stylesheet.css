@@ -4,6 +4,7 @@
   
  body {
    background-image: url(./public/images/background.jpg);
+   background-size: cover;
  }
 
  .nav-wrapper .page-footer {

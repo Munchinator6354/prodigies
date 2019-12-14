@@ -1,3 +1,36 @@
+/* .list-group-item {
+  line-height: 2.5;
+};
+
+body {
+  background-image: url(../images/background.jpg);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: blue !important;
+};
+
+main {
+  flex: 1 0 auto;
+} */
+
 .list-group-item {
   line-height: 2.5;
+}
+
+body {
+ background-image: url(../images/background.jpg);
+ background-size: cover;
+}
+
+.nav-wrapper .page-footer {
+ font-family: 'Oxygen';
+}
+
+.logo-font {
+ font-family: 'Muli';
+ height: 64px;
+ margin-top: 0;
+ padding-top: 0;
+ margin-left: 20px;
 }

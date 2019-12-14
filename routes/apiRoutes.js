@@ -28,6 +28,12 @@ module.exports = function(app) {
       res.json(games);
     });
   });
+    // Get all games
+    app.get("/api/index", function(req, res) {
+      db.games.findAll({}).then(function(games) {
+        res.json(games);
+      });
+    });
 
   // POST route for saving a new todo
   app.post("/api/leaderboard", function(req, res) {

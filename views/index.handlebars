@@ -1,33 +1,90 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Game Creation</h5>
+          <form class="clearfix mb-4" action="POST">
+            <div class="form-group">
+              <label for="example-text">Title</label>
+              <input type="text" id="title" class="form-control" aria-describedby="example-text"
+                placeholder="Enter Example Text">
+            </div>
+            <div class="form-group">
+              <label for="example-text">Description</label>
+              <input type="text" id="description" class="form-control" aria-describedby="example-text"
+                placeholder="Enter Example Text">
+            </div>
+            <div class="form-group">
+              <label for="example-text">URL</label>
+              <input type="text" id="URL" class="form-control" aria-describedby="example-text"
+                placeholder="Enter Example Text">
+            </div>
+                 <div class="form-group">
+              <label for="example-text">Image URL</label>
+              <input type="text" id="imageURL" class="form-control" aria-describedby="example-text"
+                placeholder="Enter Example Text">
+            </div>
+            <button id="submit" class="btn btn-primary float-right">Submit</button><br><br>
+       
+          </form>
+
+          {{!-- <table id="gameTable" style="width:100%" border="1">
+            <tr>
+              <th>
+                <h3 align="center">title</h3>
+              </th>
+              <th>
+                <h3 align="center">description</h3>
+              </th>
+              <th>
+                <h3 align="center">URL</h3>
+              </th>
+            </tr>
+            {{#each games}}
+
+            <tr>
+              <td>
+                <p align="center">{{this.title}}</p>
+              </td>
+              <td>
+                <p align="center">{{this.description}}</p>
+              </td>
+              <td>
+                <p align="center">{{this.URL}}</p>
+              </td>
+            </tr>
+
+            {{/each}}
+          </table> --}}
+          {{#each games}}
+                 <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="{{this.imageURL}}">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">{{this.title}}<i
+                      class="material-icons right">more_vert</i></span>
+                  <p><a href="#">{{this.URL}}</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Description<i
+                      class="material-icons right">close</i></span>
+                  <p>{{this.description}}</p>
+                </div>
+              </div>
           {{/each}}
-        </ul>
+          <a href="/">← Back To Home</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/home.js"></script>

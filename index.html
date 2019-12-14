@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Title -->
+    <title>Prodigies</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="./public/images/p-logo.jpg" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Group CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Imported Font Family from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli|Oxygen|Ubuntu&display=swap" rel="stylesheet">
+</head>
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="nav-wrapper #37474f blue-grey darken-3 ">
+                <a href="index.html" class="brand-logo">
+                    <p class="logo-font">Prodigies</p>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="future.html">Future</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End of Navbar -->
+    <!-- Container -->
+    <main>
+        <div class="container">
+
+            <!-- Carousel -->
+            <div class="row">
+                <div class="carousel carousel-slider">
+                    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
+                    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
+                    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
+                    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+                </div>
+            </div>
+            <!-- End Carousel -->
+
+
+
+
+            <!-- Card -->
+            <div class="row">
+                <!-- 1st Card -->
+                <div class="col s12 m7">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="./public/images/grey-filler-image.jpg" height="300" width="300">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd Card -->
+                <div class="col s12 m7">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="./public/images/grey-filler-image.jpg" height="300" width="300">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of container -->
+        </div>
+    </main>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+
+    <!-- Footer -->
+    <footer class="page-footer #37474f blue-grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Prodigies</h5>
+                    <p class="grey-text text-lighten-4">Prodigies exists to give educators and kids a safe place to play
+                        enriching games</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/index.html">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Team</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Future</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 Copyright Text
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Carousel Initializer -->
+    <script>
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     var elems = document.querySelectorAll('.carousel');
+        //     var instances = M.Carousel.init(elems, options);
+        // });
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        })
+    </script>
+    <!-- End Carousel Initializer -->
+
+</body>
+
+</html>

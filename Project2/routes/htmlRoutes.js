@@ -30,6 +30,14 @@ module.exports = function(app) {
       });
     });
   });
+  // Register page route
+  app.get("/register", function(req, res) {
+    res.render("register");
+  });
+  // Login page route
+  app.get("/login", function(req, res) {
+    res.render("login");
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

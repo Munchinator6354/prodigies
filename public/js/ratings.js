@@ -2,7 +2,8 @@
 var $rating = $('input[name=rating]:checked', '#ratingForm').val();
 var $comment = $("#comment");
 var $submitBtn = $("#submit");
-var $ratings = $('#str3').val();
+var $ratings;
+// var $ratings = $('#str3').val();
 
 
 
@@ -74,6 +75,12 @@ var refreshGameExamples = function() {
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
+  for(i=0;i<6;i++){
+    var value = document.getElementById("str" + i);
+    if($(value).is(':checked')){
+      $ratings = value.value;
+    }
+  }
   console.log($ratings)
   var example = {
     rating: $ratings

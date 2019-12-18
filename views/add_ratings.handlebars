@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h2 class="card-title">Add Ratings</h2>
+                    <form class="clearfix mb-4" action="POST">
+
+                        <div class="form-group">
+                           
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" src="{{games.imageURL}}">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4">{{games.title}}<i
+                                            class="material-icons right">more_vert</i></span>
+                                    <p><a href="#">{{games.URL}}</a></p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Description<i
+                                            class="material-icons right">close</i></span>
+                                    <p>{{this.description}}</p>
+                                </div>
+                            </div>
+                            <h5>How many stars would you give {{games.title}}?</h5><br><br>
+                            <div class="form-group"></div>
+                            <div id="ratingForm" class="rating">
+                                <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"
+                                        class="fa fa-star"></label></span>
+                                <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"
+                                        class="fa fa-star"></label></span>
+                                <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"
+                                        class="fa fa-star"></label></span>
+                                <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"
+                                        class="fa fa-star"></label></span>
+                                <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"
+                                        class="fa fa-star"></label></span>
+                            </div><br><br><br>
+           
+                                <h5>Add comments about {{games.title}}?</h5><br><br> 
+                                <input type="text" id="comment" class="form-control" aria-describedby="example-text"
+                                    placeholder="Enter Example Text">
+                            </div>
+                      <button data-id = "{{games.id}}" id="submit" class="btn btn-primary float-right">Submit</button><br><br>
+                    </form>
+
+
+
+                    <a href="/">← Back To Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/ratings.js"></script>

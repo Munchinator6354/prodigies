@@ -4,7 +4,7 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.games.findAll({}).then(function(games) {
-      res.render("add_game", {
+      res.render("index", {
         msg: "Welcome to adding games",
         games: games
       });
@@ -21,6 +21,15 @@ module.exports = function(app) {
       });
     });
   });
+  app.get("/add_ratings/:id", function(req, res) {
+    db.games.findOne({ where: { id: req.params.id } }).then(function(
+      games
+    ) {
+      res.render("add_ratings", {
+        games: games
+      });
+    });
+  });
   // Load games
   app.get("/add_game", function(req, res) {
     db.games.findAll({}).then(function(games) {
@@ -30,6 +39,15 @@ module.exports = function(app) {
       });
     });
   });
+    // add ratings
+    // app.get("/add_ratings", function(req, res) {
+    //   db.games.findAll({}).then(function(games) {
+    //     res.render("add_ratings", {
+    //       msg: "Welcome to adding ratings",
+    //       games: games
+    //     });
+    //   });
+    // });
   // Register page route
   app.get("/register", function(req, res) {
     res.render("register");

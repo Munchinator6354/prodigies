@@ -8,59 +8,7 @@
       <div class="card mt-4">
         <div class="card-body">
           <h5 class="card-title">Game Creation</h5>
-          <form class="clearfix mb-4" action="POST">
-            <div class="form-group">
-              <label for="example-text">Title</label>
-              <input type="text" id="title" class="form-control" aria-describedby="example-text"
-                placeholder="Enter Example Text">
-            </div>
-            <div class="form-group">
-              <label for="example-text">Description</label>
-              <input type="text" id="description" class="form-control" aria-describedby="example-text"
-                placeholder="Enter Example Text">
-            </div>
-            <div class="form-group">
-              <label for="example-text">URL</label>
-              <input type="text" id="URL" class="form-control" aria-describedby="example-text"
-                placeholder="Enter Example Text">
-            </div>
-                 <div class="form-group">
-              <label for="example-text">Image URL</label>
-              <input type="text" id="imageURL" class="form-control" aria-describedby="example-text"
-                placeholder="Enter Example Text">
-            </div>
-            <button id="submit" class="btn btn-primary float-right">Submit</button><br><br>
-       
-          </form>
 
-          {{!-- <table id="gameTable" style="width:100%" border="1">
-            <tr>
-              <th>
-                <h3 align="center">title</h3>
-              </th>
-              <th>
-                <h3 align="center">description</h3>
-              </th>
-              <th>
-                <h3 align="center">URL</h3>
-              </th>
-            </tr>
-            {{#each games}}
-
-            <tr>
-              <td>
-                <p align="center">{{this.title}}</p>
-              </td>
-              <td>
-                <p align="center">{{this.description}}</p>
-              </td>
-              <td>
-                <p align="center">{{this.URL}}</p>
-              </td>
-            </tr>
-
-            {{/each}}
-          </table> --}}
           {{#each games}}
                  <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -69,7 +17,8 @@
                 <div class="card-content">
                   <span class="card-title activator grey-text text-darken-4">{{this.title}}<i
                       class="material-icons right">more_vert</i></span>
-                  <p><a href="#">{{this.URL}}</a></p>
+                  <p><a data-id="{{this.id}}"href="https://{{this.URL}}">{{this.URL}}</a></p>
+                  <p><a href="/add_ratings/{{this.id}}">Rate this game</a></p>
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Description<i

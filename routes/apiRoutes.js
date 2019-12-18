@@ -3,11 +3,9 @@
 // }
 var db = require("../models");
 var users = [];
-var bcryptjs = require("bcryptjs");
 var passport = require('passport')
 var flash = require("express-flash")
 var session = require("express-session")
-var initializePassport = require("../public/js/passport-config")
 module.exports = function(app) {
 
   // Get all examples
@@ -94,45 +92,6 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
-  // //initializePassport
-  // initializePassport(
-  //   passport, 
-  //   email => users.find(user => user.email === email)
-  // )
-
-  // // Register User
-  // app.post("/register", async(req, res)=>{
-  //   try{
-  //     var hashedPassword = await bcryptjs.hash(req.body.password, 1)
-  //     users.push({
-  //       id: Date.now().toString(),
-  //       name: req.body.name,
-  //       email: req.body.email,
-  //       password: hashedPassword
-  //     })
-  //     res.redirect("/login")
-  //   } catch {
-  //     res.redirect("/register")
-  //   }
-
-  //   console.log(users)
-    
-  // });
-  // app.post("/login", passport.authenticate('local', {
-  //   successRedirect: '/',
-  //   failureRedirect: '/login',
-  //   failureFlash: true
-
-  // }))
-  // app.use(flash())
-  // app.use(session({
-  //   secret: process.env.SESSION_SECRET,
-  //   resave: false,
-  //   saveUninitialized: false
-  // }))
-  // app.use(passport.initialize())
-  // app.use(passport.session())
-  // });
 
   app.get("/api/add_ratings/:id", function(req, res) {
     db.games.findAll({

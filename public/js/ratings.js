@@ -3,13 +3,8 @@ var $rating = $('input[name=rating]:checked', '#ratingForm').val();
 var $comment = $("#comment");
 var $submitBtn = $("#submit");
 var $ratings;
-// var $ratings = $('#str3').val();
 
-
-
-
-// $(document).ready(function(){
-    // Check Radio-box
+// Check Radio-box
     $(".rating input:radio").attr("checked", false);
 
     $('.rating input').click(function () {
@@ -22,8 +17,6 @@ var $ratings;
         var userRating = this.value;
    
     }); 
-// });
-
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -42,6 +35,12 @@ var API = {
       url: "api/add_rating",
       type: "GET"
     });
+  },
+  getAverage: function(){
+    return $.ajax({
+      url: "/api/get_average_rating",
+      type: "GET"
+    })
   },
   deleteExample: function(id) {
     return $.ajax({
@@ -71,7 +70,6 @@ var refreshGameExamples = function() {
   });
 };
 
-// handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
@@ -97,11 +95,8 @@ var handleFormSubmit = function(event) {
     refreshGameExamples();
   });
 
-//   $ratings.v("");
-//   $comment.val("");
 };
-
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
+

@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <div class="container">
@@ -7,25 +8,26 @@
     <div class="col-8 offset-2">
       <div class="card mt-4">
         <div class="card-body">
-          <h5 class="card-title">Game Creation</h5>
+          <h5 class="card-title">Educational Games for Kids</h5>
 
           {{#each games}}
-                 <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="{{this.imageURL}}">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">{{this.title}}<i
-                      class="material-icons right">more_vert</i></span>
-                  <p><a data-id="{{this.id}}"href="https://{{this.URL}}">{{this.URL}}</a></p>
-                  <p><a href="/add_ratings/{{this.id}}">Rate this game</a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Description<i
-                      class="material-icons right">close</i></span>
-                  <p>{{this.description}}</p>
-                </div>
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="{{this.imageURL}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{this.title}}<i
+                  class="material-icons right">more_vert</i></span>
+              <p>URL: <a data-id="{{this.id}}" href="{{this.URL}}">{{this.URL}}</a></p>
+              <p>Average Rating of Game: {{this.avgRating}} Stars</p>
+              <p><a href="/add_ratings/{{this.id}}">RATE THIS!</a></p>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Description<i
+                    class="material-icons right">close</i></span>
+                <p>{{this.description}}</p>
               </div>
+            </div>
+          </div>
           {{/each}}
           <a href="/">← Back To Home</a>
         </div>

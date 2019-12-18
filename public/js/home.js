@@ -20,7 +20,13 @@ var API = {
   },
   getExamples: function() {
     return $.ajax({
-      url: "api/index",
+      url: "/api/index",
+      type: "GET"
+    });
+  },
+  getAvgRating: function() {
+    return $.ajax({
+      url: "/api/get_average_rating:id",
       type: "GET"
     });
   },
@@ -44,31 +50,6 @@ var refreshGameExamples = function() {
       $tr.append($td);
       return $tr;
 
-      //     <tr>
-      //     <td>
-      //       <p align="center">{{this.title}}</p>
-      //     </td>
-      //     <td>
-      //       <p align="center">{{this.description}}</p>
-      //     </td>
-      //     <td>
-      //       <p align="center">{{this.URL}}</p>
-      //     </td>
-      //   </tr>
-      //   var $a = $("<a>")
-      //     .text(example.title)
-      //     .attr("href", "/example/" + example.id);
-      //   var $li = $("<li>")
-      //     .attr({
-      //       class: "list-group-item",
-      //       "data-id": example.id
-      //     })
-      //     .append($a);
-      //   var $button = $("<button>")
-      //     .addClass("btn btn-danger float-right delete")
-      //     .text("ｘ");
-      //   $li.append($button);
-      //   return $li;
     });
 
     $gameTable.empty();
@@ -103,17 +84,6 @@ var handleFormSubmit = function(event) {
   $imageURL.val("");
 };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-// var handleDeleteBtnClick = function() {
-//   var idToDelete = $(this)
-//     .parent()
-//     .attr("data-id");
-
-//   API.deleteExample(idToDelete).then(function() {
-//     refreshExamples();
-//   });
-// };
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);

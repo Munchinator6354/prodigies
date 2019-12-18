@@ -11,7 +11,7 @@
                     <form class="clearfix mb-4" action="POST">
 
                         <div class="form-group">
-                           
+
                             <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="activator" src="{{games.imageURL}}">
@@ -41,12 +41,13 @@
                                 <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"
                                         class="fa fa-star"></label></span>
                             </div><br><br><br>
-           
-                                <h5>Add comments about {{games.title}}?</h5><br><br> 
-                                <input type="text" id="comment" class="form-control" aria-describedby="example-text"
-                                    placeholder="Enter Example Text">
-                            </div>
-                      <button data-id = "{{games.id}}" id="submit" class="btn btn-primary float-right">Submit</button><br><br>
+
+                            <h5>Add comments about {{games.title}}?</h5><br><br>
+                            <input type="text" id="comment" class="form-control" aria-describedby="example-text"
+                                placeholder="Enter Example Text">
+                        </div>
+                        <button data-id="{{games.id}}" id="submit"
+                            class="btn btn-primary float-right">Submit</button><br><br>
                     </form>
 
 

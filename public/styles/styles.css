@@ -18,6 +18,10 @@ main {
   line-height: 2.5;
 }
 
+.about-description {
+  color: blanchedalmond;
+}
+
 body {
  background-image: url(../images/background.jpg);
  background-size: cover;

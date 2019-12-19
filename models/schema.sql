@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS prodigiesdb;;
+CREATE DATABASE prodigiesdb;

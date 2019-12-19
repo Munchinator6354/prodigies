@@ -1,21 +1,25 @@
 {
   "development": {
-    "username": "root",
-    "password": "password",
-    "database": "prodigiesdb",
-    "host": "localhost",
+    "username": "f0kekiwja1a4sc41",
+    "password": "y8b9z5bt0chyxwq4",
+    "database": "rpghjqohktxqbh4a",
+    "host": "gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "password",
-    "database": "prodigiesdb",
-    "host": "localhost",
+    "username": "f0kekiwja1a4sc41",
+    "password": "y8b9z5bt0chyxwq4",
+    "database": "rpghjqohktxqbh4a",
+    "host": "gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "logging": false
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+    "username": "f0kekiwja1a4sc41",
+    "password": "y8b9z5bt0chyxwq4",
+    "database": "rpghjqohktxqbh4a",
+    "host": "gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "logging": false
   }
 }

@@ -1,6 +1,9 @@
-$(function() {
+$(document).ready(function(){
   $('#main').smoothState();
-});
+
+})
+ 
+
 
 // Get references to page elements
 var $emailInput = $("#emailInput");

@@ -32,9 +32,15 @@ If you haven't yet added your own rating, click the "RATE THIS!" hyperlink. Once
 
 <img src="./public/readmeGifs/ratingTheGame.gif" width="600" height="300" />
 
+## See The App in Action
+
+Follow the link below to view the Heroku hosted app.
+
+https://young-cliffs-20678.herokuapp.com/
+
 ## Usage
 
-This project was built using HTML, CSS, Materialize JS, jQuery, handlebars, MySQL, Sequelize, Three.js, and Socket.IO.
+This project was built using HTML, CSS, Materialize JS, jQuery, handlebars, MySQL, Sequelize, SmoothState.js, Three.js, and Socket.IO.
 
 ## Contributing
 

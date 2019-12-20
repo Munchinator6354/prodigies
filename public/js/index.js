@@ -1,3 +1,7 @@
+$(function() {
+  $('#main').smoothState();
+});
+
 // Get references to page elements
 var $emailInput = $("#emailInput");
 var $exampleDescription = $("#example-description");
@@ -70,7 +74,6 @@ var handleFormSubmit = function(event) {
   };
 
   if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
     return;
   }
 

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="/public/styles/stars.css">
 
 <div class="container">
   <div class="row">
@@ -19,7 +19,7 @@
               <span class="card-title activator grey-text text-darken-4">{{this.title}}<i
                   class="material-icons right">more_vert</i></span>
               <p>URL: <a data-id="{{this.id}}" href="{{this.URL}}">{{this.URL}}</a></p>
-              <p>Average Rating of Game: {{this.avgRating}} Stars</p>
+              <p>Average Rating of Game: <div class="stars">{{this.avgRating}}</div> out of 5 Stars</p>
               <p><a href="/add_ratings/{{this.id}}">RATE THIS!</a></p>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Description<i
@@ -39,3 +39,4 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="/js/home.js"></script>
+<script src="/js/stars.js"></script>

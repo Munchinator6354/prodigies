@@ -17,7 +17,11 @@ body {
 
 div.card.mt-4 {
   background-color: transparent !important;
-  color: white !important;
+  color: white;
+}
+
+.card-content{
+  color: darkblue;
 }
 
 nav {

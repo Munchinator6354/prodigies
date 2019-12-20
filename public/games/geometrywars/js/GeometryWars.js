@@ -495,7 +495,7 @@ GeometryWars = (function() {
             .start();
           characters.add(shapeObject);
         });
-      }, Math.random() * 20000);
+      }, Math.random() * 6000);
     }
     for (let i = 0; i < 500; i++) {
       let sphere = GeometryWars.Shapes.Sphere;
@@ -510,7 +510,7 @@ GeometryWars = (function() {
             .start();
           food.add(shapeObject);
         });
-      }, Math.random() * 10000);
+      }, Math.random() * 4000);
     }
   }
 

@@ -40,7 +40,7 @@ https://young-cliffs-20678.herokuapp.com/
 
 ## Usage
 
-This project was built using HTML, CSS, Materialize JS, jQuery, handlebars, MySQL, Sequelize, SmoothState.js, Three.js, and Socket.IO.
+This project was built using HTML, CSS, Materialize JS, jQuery, handlebars, MySQL, Sequelize, SmoothState.js, and Three.js.
 
 ## Contributing
 

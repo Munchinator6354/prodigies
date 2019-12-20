@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Geometry Wars</title>
+    <link href='css/reset.css' rel='stylesheet' type='text/css'>
+    <link href='css/fonts.css' rel='stylesheet' type='text/css'>
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+</head>
+<body class="prevent-transitions">
+  <canvas class="canvas" id="canvas"></canvas>
+  <!--  -->
+  <!-- BODY HERE -->
+  <span class="title"></span>
+  <!--  -->
+  <script src="js/jquery.min.js">
+    // ^ jQuery </script>
+  <script src="js/keydrown.min.js">
+    // ^ Keydrown </script>
+  <script src="js/inflate.min.js">
+    // ^ Zlib Inflate </script>
+  <script src="js/dat.gui.min.js">
+    // ^ dat.GUI </script>
+  <script type="x-shader/x-vertex" id="vertexshader">
+		varying vec2 vUv;
+		void main() {
+			vUv = uv;
+			gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+		}
+	</script>
+	<script type="x-shader/x-fragment" id="fragmentshader">
+		uniform sampler2D baseTexture;
+		uniform sampler2D bloomTexture;
+		varying vec2 vUv;
+		vec4 getTexture( sampler2D texelToLinearTexture ) {
+			return mapTexelToLinear( texture2D( texelToLinearTexture , vUv ) );
+		}
+		void main() {
+			gl_FragColor = ( getTexture( baseTexture ) + vec4( 1.0 ) * getTexture( bloomTexture ) );
+		}
+	</script>
+  <!--
+  <script src="js/three.min.js">
+    // ^ Three.js r103 </script>
+  -->
+  <script src="js/tween.umd.js">
+    //  ^ Tween.min.js </script>
+  <script src="js/three.js">
+    //  ^ Three.js r103 (not minified) </script>
+  <script src="js/OrbitControls.js">
+    // ^ OrbitControls </script>
+  <script src="js/EffectComposer.js">
+    // ^ Post-processing Effect Composer </script>
+  <script src="js/RenderPass.js">
+    // ^ Post-processing Render Pass </script>
+  <script src="js/ShaderPass.js">
+    // ^ Post-processing Shader Pass </script>
+  <script src="js/CopyShader.js">
+    // ^ Post-processing Copy Shader </script>
+  <script src="js/FXAAShader.js">
+    // ^ Post-processing FXAA Shader </script>
+  <script src="js/LuminosityHighPassShader.js">
+    // ^ Post-processing Luminosity High-Pass Shader </script>
+  <script src="js/UnrealBloomPass.js">
+    // ^ Post-processing Bloom Pass </script>
+  <script src="js/socket.io.js">
+    // ^ Socket.io </script>
+  <script src="js/GeometryWars.js">
+    // ^ Covenant IIFE </script>
+  <script src="js/GeometryWars_Shapes.js">
+    // ^ Covenant Scene IIFE </script>
+  <script src="js/GeometryWars_Tools.js">
+    // ^ Covenant UI IIFE </script>
+</body>
+</html>

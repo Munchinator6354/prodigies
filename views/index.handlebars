@@ -3,14 +3,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/public/styles/stars.css">
 
-<div class="container">
+<div class="container" id="main">
   <div class="row">
     <div class="col-8 offset-2">
       <div class="card mt-4">
         <div class="card-body">
           <h5 class="card-title">Educational Games for Kids</h5>
-
           {{#each games}}
+
           <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator" src="{{this.imageURL}}">
@@ -25,9 +25,9 @@
                 <span class="card-title grey-text text-darken-4">Description<i
                     class="material-icons right">close</i></span>
                 <p>{{this.description}}</p>
+
               </div>
             </div>
-          </div>
           {{/each}}
           <a href="/">← Back To Home</a>
         </div>
@@ -37,6 +37,9 @@
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/smoothState.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="/js/home.js"></script>
+
 <script src="/js/stars.js"></script>
+

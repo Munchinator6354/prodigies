@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Cuprum:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700);
+
+/* PT Serif, Lustria, and Crimson Text */
+
+@font-face {
+  font-family: 'Uni';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('fonts/uni.woff')
+    format('woff');
+}
+
+@font-face {
+  font-family: 'Pixel';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    /* url('fonts/joystix-mono.woff') */
+    url('fonts/pixellari.woff')
+    format('woff');
+}

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -7,19 +10,45 @@
 }
 
 body {
- background-image: url(../images/background.jpg);
- background-size: cover;
+ background-color: rgbA(0, 20, 40, 1.00) !important;
+ font-family: 'Merriweather', serif;
+ letter-spacing: 0.1em;
+}
+
+div.card.mt-4 {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+nav {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  padding: 0.5em 2em !important;
+}
+
+nav ul {
+  font-weight: 400;
+}
+
+nav, footer {
+  background-color: rgbA(255, 255, 255, 0.20) !important;
 }
 
 .nav-wrapper .page-footer {
- font-family: 'Oxygen';
+ /* font-family: 'Oxygen'; */
 }
 
 .logo-font {
- font-family: 'Muli';
+ /* font-family: 'Muli';
  height: 64px;
  margin-top: 0;
- padding-top: 0;
+ padding-top: 0; */
+ font-family: 'Montserrat';
+}
+.logo-font:hover {
+  text-decoration: none;
+
 }
 .rating {
   float:left;
